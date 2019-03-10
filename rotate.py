@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 
 __author__ = "francazorla7"
+__license__ = "GPL"
+__version__ = "1.0"
 
 import numpy as np
-import math
 
 '''
-@param modelName: Nombre del fichero que contiene el modelo generado en weka
-@param x: La instancia que se pretende clasificar
-@param arffName: El nombre del fichero arff que se ha utilizado para generar el modelo en Weka
-@return pred: La clase que predice
+@param filename: Nombre del fichero de entrada del mapa
+@param filenameOutput: Nombre del fichero de salida del mapa rotado
+@param n: Numero de veces que se quiere aplicar la rotacion
 '''
-def trim_and_rotate(filename, filenameOutput, n=1):
+def rotate(filename, filenameOutput, n=1):
 
 	buff = ""
 
@@ -40,4 +40,4 @@ def trim_and_rotate(filename, filenameOutput, n=1):
 
 if __name__ == '__main__':
 	
-	trim_and_rotate("test/map.lay", "test/map_rotated.lay", n=1)
+	rotate("test/map.lay", "test/map_rotated.lay", n=1)
